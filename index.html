@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Juxters 1.0</title>
+    <meta charset="utf-8">
+      <script src="scaleToWindow.js"></script>
+      <script src="interact.js"></script>
+      <script src="interactions.js"></script>
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <canvas id="canvas" width="384" height="700"></canvas>
+      
+    <div id="drag-area">
+      <div id="dropzone" class="dropzone">
+        #outer-dropzone
+       </div>
+       <div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+       <div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+       <div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+       <div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+       <div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+       <div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+        
+    </div>
+
+  </body>
+
+  <script>
+    main();
+    function main() {
+      const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+        window.addEventListener("load", function(event){ 
+        scale = scaleToWindow(canvas);
+            });
+      window.addEventListener("resize", function(event){ 
+        scale = scaleToWindow(canvas);
+            });
+
+    }
+  </script>
+</html>
